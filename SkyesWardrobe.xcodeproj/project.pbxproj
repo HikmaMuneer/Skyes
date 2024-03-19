@@ -8,12 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		9D3FF05E2BA5FA61002D1146 /* SkyesWardrobeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF05D2BA5FA61002D1146 /* SkyesWardrobeApp.swift */; };
-		9D3FF0602BA5FA61002D1146 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF05F2BA5FA61002D1146 /* ContentView.swift */; };
 		9D3FF0622BA5FA63002D1146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FF0612BA5FA63002D1146 /* Assets.xcassets */; };
 		9D3FF0652BA5FA63002D1146 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FF0642BA5FA63002D1146 /* Preview Assets.xcassets */; };
 		9D3FF06F2BA5FA63002D1146 /* SkyesWardrobeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF06E2BA5FA63002D1146 /* SkyesWardrobeTests.swift */; };
 		9D3FF0792BA5FA63002D1146 /* SkyesWardrobeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF0782BA5FA63002D1146 /* SkyesWardrobeUITests.swift */; };
 		9D3FF07B2BA5FA63002D1146 /* SkyesWardrobeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF07A2BA5FA63002D1146 /* SkyesWardrobeUITestsLaunchTests.swift */; };
+		9D3FF08D2BA60194002D1146 /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FF0892BA60194002D1146 /* Gilroy-SemiBold.ttf */; };
+		9D3FF08E2BA60194002D1146 /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FF08A2BA60194002D1146 /* Gilroy-Medium.ttf */; };
+		9D3FF08F2BA60194002D1146 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FF08B2BA60194002D1146 /* Gilroy-Bold.ttf */; };
+		9D3FF0902BA60194002D1146 /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FF08C2BA60194002D1146 /* Gilroy-Regular.ttf */; };
+		9D4995D52BA8424200C51008 /* ServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4995D42BA8424200C51008 /* ServiceCall.swift */; };
+		9D4995D72BA8A2EF00C51008 /* Globs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4995D62BA8A2EF00C51008 /* Globs.swift */; };
+		9D4995DA2BA8BCFA00C51008 /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4995D92BA8BCFA00C51008 /* UIKitExtension.swift */; };
+		9D4995DC2BA8F82200C51008 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4995DB2BA8F82200C51008 /* SignUpView.swift */; };
+		9D5D5D2C2BA96F5700C0614B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5D5D2B2BA96F5700C0614B /* UserModel.swift */; };
+		9DA9C0A42BA6CDB200424987 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9C0A32BA6CDB200424987 /* WelcomeView.swift */; };
+		9DA9C0A62BA6CE2100424987 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA9C0A52BA6CE2100424987 /* Launch Screen.storyboard */; };
+		9DA9C0A82BA6E51500424987 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9C0A72BA6E51500424987 /* UIExtension.swift */; };
+		9DA9C0AA2BA720CC00424987 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9C0A92BA720CC00424987 /* RoundButton.swift */; };
+		9DA9C0AC2BA7267000424987 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9C0AB2BA7267000424987 /* SignInView.swift */; };
+		9DA9C0AF2BA7462700424987 /* CountryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 9DA9C0AE2BA7462700424987 /* CountryPicker */; };
+		9DA9C0B12BA7478A00424987 /* CountryPickerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9C0B02BA7478A00424987 /* CountryPickerUI.swift */; };
+		9DA9C0B32BA7567F00424987 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9C0B22BA7567F00424987 /* LoginView.swift */; };
+		9DA9C0B52BA7715200424987 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9C0B42BA7715200424987 /* MainViewModel.swift */; };
+		9DA9C0B72BA79D1F00424987 /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9C0B62BA79D1F00424987 /* LineTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +54,6 @@
 /* Begin PBXFileReference section */
 		9D3FF05A2BA5FA61002D1146 /* SkyesWardrobe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyesWardrobe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3FF05D2BA5FA61002D1146 /* SkyesWardrobeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyesWardrobeApp.swift; sourceTree = "<group>"; };
-		9D3FF05F2BA5FA61002D1146 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9D3FF0612BA5FA63002D1146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D3FF0642BA5FA63002D1146 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9D3FF06A2BA5FA63002D1146 /* SkyesWardrobeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyesWardrobeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +61,25 @@
 		9D3FF0742BA5FA63002D1146 /* SkyesWardrobeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyesWardrobeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3FF0782BA5FA63002D1146 /* SkyesWardrobeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyesWardrobeUITests.swift; sourceTree = "<group>"; };
 		9D3FF07A2BA5FA63002D1146 /* SkyesWardrobeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyesWardrobeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9D3FF0882BA600DD002D1146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9D3FF0892BA60194002D1146 /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
+		9D3FF08A2BA60194002D1146 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
+		9D3FF08B2BA60194002D1146 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		9D3FF08C2BA60194002D1146 /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
+		9D4995D42BA8424200C51008 /* ServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCall.swift; sourceTree = "<group>"; };
+		9D4995D62BA8A2EF00C51008 /* Globs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globs.swift; sourceTree = "<group>"; };
+		9D4995D92BA8BCFA00C51008 /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
+		9D4995DB2BA8F82200C51008 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		9D5D5D2B2BA96F5700C0614B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		9DA9C0A32BA6CDB200424987 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		9DA9C0A52BA6CE2100424987 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		9DA9C0A72BA6E51500424987 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
+		9DA9C0A92BA720CC00424987 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		9DA9C0AB2BA7267000424987 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		9DA9C0B02BA7478A00424987 /* CountryPickerUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerUI.swift; sourceTree = "<group>"; };
+		9DA9C0B22BA7567F00424987 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9DA9C0B42BA7715200424987 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		9DA9C0B62BA79D1F00424987 /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DA9C0AF2BA7462700424987 /* CountryPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +131,17 @@
 		9D3FF05C2BA5FA61002D1146 /* SkyesWardrobe */ = {
 			isa = PBXGroup;
 			children = (
+				9D4995D82BA8BCAF00C51008 /* Common */,
+				9DA9C0A12BA6CD2B00424987 /* UICommon */,
+				9D3FF0932BA6029A002D1146 /* ViewModel */,
+				9D3FF0922BA60293002D1146 /* Model */,
+				9D3FF0912BA60279002D1146 /* View */,
+				9D3FF0882BA600DD002D1146 /* Info.plist */,
+				9D3FF0872BA5FBA6002D1146 /* Font */,
 				9D3FF05D2BA5FA61002D1146 /* SkyesWardrobeApp.swift */,
-				9D3FF05F2BA5FA61002D1146 /* ContentView.swift */,
 				9D3FF0612BA5FA63002D1146 /* Assets.xcassets */,
 				9D3FF0632BA5FA63002D1146 /* Preview Content */,
+				9DA9C0A52BA6CE2100424987 /* Launch Screen.storyboard */,
 			);
 			path = SkyesWardrobe;
 			sourceTree = "<group>";
@@ -127,6 +171,73 @@
 			path = SkyesWardrobeUITests;
 			sourceTree = "<group>";
 		};
+		9D3FF0872BA5FBA6002D1146 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				9D3FF08B2BA60194002D1146 /* Gilroy-Bold.ttf */,
+				9D3FF08A2BA60194002D1146 /* Gilroy-Medium.ttf */,
+				9D3FF08C2BA60194002D1146 /* Gilroy-Regular.ttf */,
+				9D3FF0892BA60194002D1146 /* Gilroy-SemiBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		9D3FF0912BA60279002D1146 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9DA9C0A22BA6CD8500424987 /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9D3FF0922BA60293002D1146 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D5D5D2B2BA96F5700C0614B /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9D3FF0932BA6029A002D1146 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9DA9C0B42BA7715200424987 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9D4995D82BA8BCAF00C51008 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9D4995D92BA8BCFA00C51008 /* UIKitExtension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9DA9C0A12BA6CD2B00424987 /* UICommon */ = {
+			isa = PBXGroup;
+			children = (
+				9DA9C0A72BA6E51500424987 /* UIExtension.swift */,
+				9DA9C0A92BA720CC00424987 /* RoundButton.swift */,
+				9DA9C0B02BA7478A00424987 /* CountryPickerUI.swift */,
+				9DA9C0B62BA79D1F00424987 /* LineTextField.swift */,
+				9D4995D42BA8424200C51008 /* ServiceCall.swift */,
+				9D4995D62BA8A2EF00C51008 /* Globs.swift */,
+			);
+			path = UICommon;
+			sourceTree = "<group>";
+		};
+		9DA9C0A22BA6CD8500424987 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9DA9C0A32BA6CDB200424987 /* WelcomeView.swift */,
+				9DA9C0AB2BA7267000424987 /* SignInView.swift */,
+				9DA9C0B22BA7567F00424987 /* LoginView.swift */,
+				9D4995DB2BA8F82200C51008 /* SignUpView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +254,9 @@
 			dependencies = (
 			);
 			name = SkyesWardrobe;
+			packageProductDependencies = (
+				9DA9C0AE2BA7462700424987 /* CountryPicker */,
+			);
 			productName = SkyesWardrobe;
 			productReference = 9D3FF05A2BA5FA61002D1146 /* SkyesWardrobe.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +329,9 @@
 				Base,
 			);
 			mainGroup = 9D3FF0512BA5FA61002D1146;
+			packageReferences = (
+				9DA9C0AD2BA7462700424987 /* XCRemoteSwiftPackageReference "CountryPicker" */,
+			);
 			productRefGroup = 9D3FF05B2BA5FA61002D1146 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,7 +349,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D3FF0652BA5FA63002D1146 /* Preview Assets.xcassets in Resources */,
+				9D3FF0902BA60194002D1146 /* Gilroy-Regular.ttf in Resources */,
+				9D3FF08E2BA60194002D1146 /* Gilroy-Medium.ttf in Resources */,
+				9D3FF08F2BA60194002D1146 /* Gilroy-Bold.ttf in Resources */,
+				9D3FF08D2BA60194002D1146 /* Gilroy-SemiBold.ttf in Resources */,
 				9D3FF0622BA5FA63002D1146 /* Assets.xcassets in Resources */,
+				9DA9C0A62BA6CE2100424987 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +379,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D3FF0602BA5FA61002D1146 /* ContentView.swift in Sources */,
+				9DA9C0B12BA7478A00424987 /* CountryPickerUI.swift in Sources */,
+				9DA9C0B72BA79D1F00424987 /* LineTextField.swift in Sources */,
+				9DA9C0B32BA7567F00424987 /* LoginView.swift in Sources */,
+				9D4995D72BA8A2EF00C51008 /* Globs.swift in Sources */,
+				9DA9C0AA2BA720CC00424987 /* RoundButton.swift in Sources */,
 				9D3FF05E2BA5FA61002D1146 /* SkyesWardrobeApp.swift in Sources */,
+				9D4995DA2BA8BCFA00C51008 /* UIKitExtension.swift in Sources */,
+				9DA9C0A82BA6E51500424987 /* UIExtension.swift in Sources */,
+				9D5D5D2C2BA96F5700C0614B /* UserModel.swift in Sources */,
+				9D4995DC2BA8F82200C51008 /* SignUpView.swift in Sources */,
+				9DA9C0A42BA6CDB200424987 /* WelcomeView.swift in Sources */,
+				9D4995D52BA8424200C51008 /* ServiceCall.swift in Sources */,
+				9DA9C0AC2BA7267000424987 /* SignInView.swift in Sources */,
+				9DA9C0B52BA7715200424987 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,11 +558,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SkyesWardrobe/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SkyesWardrobe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,11 +588,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SkyesWardrobe/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SkyesWardrobe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -582,6 +720,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9DA9C0AD2BA7462700424987 /* XCRemoteSwiftPackageReference "CountryPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mobven/CountryPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9DA9C0AE2BA7462700424987 /* CountryPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DA9C0AD2BA7462700424987 /* XCRemoteSwiftPackageReference "CountryPicker" */;
+			productName = CountryPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D3FF0522BA5FA61002D1146 /* Project object */;
 }

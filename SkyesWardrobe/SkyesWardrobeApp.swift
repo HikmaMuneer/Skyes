@@ -11,7 +11,10 @@ import SwiftUI
 struct SkyesWardrobeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView{
+                WelcomeView()
+            }
+           
         }
     }
 }
