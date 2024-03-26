@@ -62,6 +62,7 @@ struct SignInView: View {
                         
                         
                     }
+                    
                     NavigationLink{
                         LoginView()
                     } label: {

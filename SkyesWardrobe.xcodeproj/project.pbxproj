@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D376F482BB35A29005F6310 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F472BB35A29005F6310 /* TabButton.swift */; };
+		9D376F4A2BB35D49005F6310 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F492BB35D49005F6310 /* SearchTextField.swift */; };
+		9D376F4C2BB35F8C005F6310 /* SectionTitleAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F4B2BB35F8C005F6310 /* SectionTitleAll.swift */; };
 		9D3FF05E2BA5FA61002D1146 /* SkyesWardrobeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF05D2BA5FA61002D1146 /* SkyesWardrobeApp.swift */; };
 		9D3FF0622BA5FA63002D1146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FF0612BA5FA63002D1146 /* Assets.xcassets */; };
 		9D3FF0652BA5FA63002D1146 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FF0642BA5FA63002D1146 /* Preview Assets.xcassets */; };
@@ -21,6 +24,7 @@
 		9D4995D72BA8A2EF00C51008 /* Globs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4995D62BA8A2EF00C51008 /* Globs.swift */; };
 		9D4995DA2BA8BCFA00C51008 /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4995D92BA8BCFA00C51008 /* UIKitExtension.swift */; };
 		9D4995DC2BA8F82200C51008 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4995DB2BA8F82200C51008 /* SignUpView.swift */; };
+		9D5602A02BA99D3200CA98E0 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D56029F2BA99D3200CA98E0 /* MainTabView.swift */; };
 		9D5D5D2C2BA96F5700C0614B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5D5D2B2BA96F5700C0614B /* UserModel.swift */; };
 		9DA9C0A42BA6CDB200424987 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9C0A32BA6CDB200424987 /* WelcomeView.swift */; };
 		9DA9C0A62BA6CE2100424987 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA9C0A52BA6CE2100424987 /* Launch Screen.storyboard */; };
@@ -52,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D376F472BB35A29005F6310 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		9D376F492BB35D49005F6310 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		9D376F4B2BB35F8C005F6310 /* SectionTitleAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitleAll.swift; sourceTree = "<group>"; };
 		9D3FF05A2BA5FA61002D1146 /* SkyesWardrobe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyesWardrobe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3FF05D2BA5FA61002D1146 /* SkyesWardrobeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyesWardrobeApp.swift; sourceTree = "<group>"; };
 		9D3FF0612BA5FA63002D1146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +77,7 @@
 		9D4995D62BA8A2EF00C51008 /* Globs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globs.swift; sourceTree = "<group>"; };
 		9D4995D92BA8BCFA00C51008 /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
 		9D4995DB2BA8F82200C51008 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		9D56029F2BA99D3200CA98E0 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		9D5D5D2B2BA96F5700C0614B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9DA9C0A32BA6CDB200424987 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		9DA9C0A52BA6CE2100424987 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -185,6 +193,7 @@
 		9D3FF0912BA60279002D1146 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D56029E2BA99D1F00CA98E0 /* MainTab */,
 				9DA9C0A22BA6CD8500424987 /* Login */,
 			);
 			path = View;
@@ -214,6 +223,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		9D56029E2BA99D1F00CA98E0 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				9D56029F2BA99D3200CA98E0 /* MainTabView.swift */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
 		9DA9C0A12BA6CD2B00424987 /* UICommon */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +240,9 @@
 				9DA9C0B62BA79D1F00424987 /* LineTextField.swift */,
 				9D4995D42BA8424200C51008 /* ServiceCall.swift */,
 				9D4995D62BA8A2EF00C51008 /* Globs.swift */,
+				9D376F472BB35A29005F6310 /* TabButton.swift */,
+				9D376F492BB35D49005F6310 /* SearchTextField.swift */,
+				9D376F4B2BB35F8C005F6310 /* SectionTitleAll.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -390,9 +410,13 @@
 				9D5D5D2C2BA96F5700C0614B /* UserModel.swift in Sources */,
 				9D4995DC2BA8F82200C51008 /* SignUpView.swift in Sources */,
 				9DA9C0A42BA6CDB200424987 /* WelcomeView.swift in Sources */,
+				9D376F4A2BB35D49005F6310 /* SearchTextField.swift in Sources */,
+				9D376F4C2BB35F8C005F6310 /* SectionTitleAll.swift in Sources */,
 				9D4995D52BA8424200C51008 /* ServiceCall.swift in Sources */,
 				9DA9C0AC2BA7267000424987 /* SignInView.swift in Sources */,
+				9D376F482BB35A29005F6310 /* TabButton.swift in Sources */,
 				9DA9C0B52BA7715200424987 /* MainViewModel.swift in Sources */,
+				9D5602A02BA99D3200CA98E0 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
