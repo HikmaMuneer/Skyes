@@ -87,7 +87,7 @@ class MainViewModel: ObservableObject {
         }
         
         if(txtPassword.isEmpty){
-            self.errorMessage = "Please enter a valid password"
+            self.errorMessage = "Password is incorrect"
             self.showError = true
             return
         }

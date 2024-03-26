@@ -10,6 +10,22 @@
 		9D376F482BB35A29005F6310 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F472BB35A29005F6310 /* TabButton.swift */; };
 		9D376F4A2BB35D49005F6310 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F492BB35D49005F6310 /* SearchTextField.swift */; };
 		9D376F4C2BB35F8C005F6310 /* SectionTitleAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F4B2BB35F8C005F6310 /* SectionTitleAll.swift */; };
+		9D376F4E2BB36314005F6310 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F4D2BB36314005F6310 /* ProductCell.swift */; };
+		9D376F502BB36381005F6310 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F4F2BB36381005F6310 /* CategoryCell.swift */; };
+		9D376F532BB36E09005F6310 /* CountryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 9D376F522BB36E09005F6310 /* CountryPicker */; };
+		9D376F562BB372FA005F6310 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9D376F552BB372FA005F6310 /* SDWebImageSwiftUI */; };
+		9D376F582BB37378005F6310 /* FavouriteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F572BB37378005F6310 /* FavouriteRow.swift */; };
+		9D376F5A2BB373D3005F6310 /* ExploreCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F592BB373D3005F6310 /* ExploreCategoryCell.swift */; };
+		9D376F5C2BB37418005F6310 /* CartItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F5B2BB37418005F6310 /* CartItemRow.swift */; };
+		9D376F5E2BB3744B005F6310 /* AccountRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F5D2BB3744B005F6310 /* AccountRow.swift */; };
+		9D376F602BB37490005F6310 /* OrderItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F5F2BB37490005F6310 /* OrderItemRow.swift */; };
+		9D376F642BB37A6C005F6310 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F632BB37A6C005F6310 /* HomeViewModel.swift */; };
+		9D376F662BB37AAD005F6310 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F652BB37AAD005F6310 /* ProductModel.swift */; };
+		9D376F682BB37AE9005F6310 /* TypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F672BB37AE9005F6310 /* TypeModel.swift */; };
+		9D376F6A2BB37B1A005F6310 /* CartItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F692BB37B1A005F6310 /* CartItemModel.swift */; };
+		9D376F6C2BB37B8C005F6310 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F6B2BB37B8C005F6310 /* ProductDetailViewModel.swift */; };
+		9D376F6E2BB37BB6005F6310 /* FavouriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F6D2BB37BB6005F6310 /* FavouriteViewModel.swift */; };
+		9D376F702BB37BD2005F6310 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376F6F2BB37BD2005F6310 /* ExploreViewModel.swift */; };
 		9D3FF05E2BA5FA61002D1146 /* SkyesWardrobeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF05D2BA5FA61002D1146 /* SkyesWardrobeApp.swift */; };
 		9D3FF0622BA5FA63002D1146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FF0612BA5FA63002D1146 /* Assets.xcassets */; };
 		9D3FF0652BA5FA63002D1146 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FF0642BA5FA63002D1146 /* Preview Assets.xcassets */; };
@@ -31,7 +47,6 @@
 		9DA9C0A82BA6E51500424987 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9C0A72BA6E51500424987 /* UIExtension.swift */; };
 		9DA9C0AA2BA720CC00424987 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9C0A92BA720CC00424987 /* RoundButton.swift */; };
 		9DA9C0AC2BA7267000424987 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9C0AB2BA7267000424987 /* SignInView.swift */; };
-		9DA9C0AF2BA7462700424987 /* CountryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 9DA9C0AE2BA7462700424987 /* CountryPicker */; };
 		9DA9C0B12BA7478A00424987 /* CountryPickerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9C0B02BA7478A00424987 /* CountryPickerUI.swift */; };
 		9DA9C0B32BA7567F00424987 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9C0B22BA7567F00424987 /* LoginView.swift */; };
 		9DA9C0B52BA7715200424987 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9C0B42BA7715200424987 /* MainViewModel.swift */; };
@@ -59,6 +74,20 @@
 		9D376F472BB35A29005F6310 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		9D376F492BB35D49005F6310 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		9D376F4B2BB35F8C005F6310 /* SectionTitleAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitleAll.swift; sourceTree = "<group>"; };
+		9D376F4D2BB36314005F6310 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		9D376F4F2BB36381005F6310 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		9D376F572BB37378005F6310 /* FavouriteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRow.swift; sourceTree = "<group>"; };
+		9D376F592BB373D3005F6310 /* ExploreCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCategoryCell.swift; sourceTree = "<group>"; };
+		9D376F5B2BB37418005F6310 /* CartItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemRow.swift; sourceTree = "<group>"; };
+		9D376F5D2BB3744B005F6310 /* AccountRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRow.swift; sourceTree = "<group>"; };
+		9D376F5F2BB37490005F6310 /* OrderItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemRow.swift; sourceTree = "<group>"; };
+		9D376F632BB37A6C005F6310 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9D376F652BB37AAD005F6310 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		9D376F672BB37AE9005F6310 /* TypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeModel.swift; sourceTree = "<group>"; };
+		9D376F692BB37B1A005F6310 /* CartItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemModel.swift; sourceTree = "<group>"; };
+		9D376F6B2BB37B8C005F6310 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
+		9D376F6D2BB37BB6005F6310 /* FavouriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewModel.swift; sourceTree = "<group>"; };
+		9D376F6F2BB37BD2005F6310 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		9D3FF05A2BA5FA61002D1146 /* SkyesWardrobe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyesWardrobe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3FF05D2BA5FA61002D1146 /* SkyesWardrobeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyesWardrobeApp.swift; sourceTree = "<group>"; };
 		9D3FF0612BA5FA63002D1146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,7 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DA9C0AF2BA7462700424987 /* CountryPicker in Frameworks */,
+				9D376F562BB372FA005F6310 /* SDWebImageSwiftUI in Frameworks */,
+				9D376F532BB36E09005F6310 /* CountryPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +233,9 @@
 			isa = PBXGroup;
 			children = (
 				9D5D5D2B2BA96F5700C0614B /* UserModel.swift */,
+				9D376F652BB37AAD005F6310 /* ProductModel.swift */,
+				9D376F672BB37AE9005F6310 /* TypeModel.swift */,
+				9D376F692BB37B1A005F6310 /* CartItemModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,6 +244,10 @@
 			isa = PBXGroup;
 			children = (
 				9DA9C0B42BA7715200424987 /* MainViewModel.swift */,
+				9D376F632BB37A6C005F6310 /* HomeViewModel.swift */,
+				9D376F6B2BB37B8C005F6310 /* ProductDetailViewModel.swift */,
+				9D376F6D2BB37BB6005F6310 /* FavouriteViewModel.swift */,
+				9D376F6F2BB37BD2005F6310 /* ExploreViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -243,6 +280,13 @@
 				9D376F472BB35A29005F6310 /* TabButton.swift */,
 				9D376F492BB35D49005F6310 /* SearchTextField.swift */,
 				9D376F4B2BB35F8C005F6310 /* SectionTitleAll.swift */,
+				9D376F4D2BB36314005F6310 /* ProductCell.swift */,
+				9D376F4F2BB36381005F6310 /* CategoryCell.swift */,
+				9D376F572BB37378005F6310 /* FavouriteRow.swift */,
+				9D376F592BB373D3005F6310 /* ExploreCategoryCell.swift */,
+				9D376F5B2BB37418005F6310 /* CartItemRow.swift */,
+				9D376F5D2BB3744B005F6310 /* AccountRow.swift */,
+				9D376F5F2BB37490005F6310 /* OrderItemRow.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -275,7 +319,8 @@
 			);
 			name = SkyesWardrobe;
 			packageProductDependencies = (
-				9DA9C0AE2BA7462700424987 /* CountryPicker */,
+				9D376F522BB36E09005F6310 /* CountryPicker */,
+				9D376F552BB372FA005F6310 /* SDWebImageSwiftUI */,
 			);
 			productName = SkyesWardrobe;
 			productReference = 9D3FF05A2BA5FA61002D1146 /* SkyesWardrobe.app */;
@@ -350,7 +395,8 @@
 			);
 			mainGroup = 9D3FF0512BA5FA61002D1146;
 			packageReferences = (
-				9DA9C0AD2BA7462700424987 /* XCRemoteSwiftPackageReference "CountryPicker" */,
+				9D376F512BB36E09005F6310 /* XCRemoteSwiftPackageReference "CountryPicker" */,
+				9D376F542BB372FA005F6310 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 9D3FF05B2BA5FA61002D1146 /* Products */;
 			projectDirPath = "";
@@ -399,24 +445,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D376F5E2BB3744B005F6310 /* AccountRow.swift in Sources */,
 				9DA9C0B12BA7478A00424987 /* CountryPickerUI.swift in Sources */,
 				9DA9C0B72BA79D1F00424987 /* LineTextField.swift in Sources */,
 				9DA9C0B32BA7567F00424987 /* LoginView.swift in Sources */,
+				9D376F662BB37AAD005F6310 /* ProductModel.swift in Sources */,
 				9D4995D72BA8A2EF00C51008 /* Globs.swift in Sources */,
+				9D376F602BB37490005F6310 /* OrderItemRow.swift in Sources */,
 				9DA9C0AA2BA720CC00424987 /* RoundButton.swift in Sources */,
+				9D376F5A2BB373D3005F6310 /* ExploreCategoryCell.swift in Sources */,
 				9D3FF05E2BA5FA61002D1146 /* SkyesWardrobeApp.swift in Sources */,
+				9D376F6E2BB37BB6005F6310 /* FavouriteViewModel.swift in Sources */,
 				9D4995DA2BA8BCFA00C51008 /* UIKitExtension.swift in Sources */,
 				9DA9C0A82BA6E51500424987 /* UIExtension.swift in Sources */,
 				9D5D5D2C2BA96F5700C0614B /* UserModel.swift in Sources */,
+				9D376F5C2BB37418005F6310 /* CartItemRow.swift in Sources */,
 				9D4995DC2BA8F82200C51008 /* SignUpView.swift in Sources */,
 				9DA9C0A42BA6CDB200424987 /* WelcomeView.swift in Sources */,
 				9D376F4A2BB35D49005F6310 /* SearchTextField.swift in Sources */,
 				9D376F4C2BB35F8C005F6310 /* SectionTitleAll.swift in Sources */,
 				9D4995D52BA8424200C51008 /* ServiceCall.swift in Sources */,
 				9DA9C0AC2BA7267000424987 /* SignInView.swift in Sources */,
+				9D376F4E2BB36314005F6310 /* ProductCell.swift in Sources */,
 				9D376F482BB35A29005F6310 /* TabButton.swift in Sources */,
+				9D376F642BB37A6C005F6310 /* HomeViewModel.swift in Sources */,
+				9D376F6C2BB37B8C005F6310 /* ProductDetailViewModel.swift in Sources */,
 				9DA9C0B52BA7715200424987 /* MainViewModel.swift in Sources */,
+				9D376F582BB37378005F6310 /* FavouriteRow.swift in Sources */,
+				9D376F6A2BB37B1A005F6310 /* CartItemModel.swift in Sources */,
+				9D376F702BB37BD2005F6310 /* ExploreViewModel.swift in Sources */,
+				9D376F682BB37AE9005F6310 /* TypeModel.swift in Sources */,
 				9D5602A02BA99D3200CA98E0 /* MainTabView.swift in Sources */,
+				9D376F502BB36381005F6310 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,21 +806,35 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9DA9C0AD2BA7462700424987 /* XCRemoteSwiftPackageReference "CountryPicker" */ = {
+		9D376F512BB36E09005F6310 /* XCRemoteSwiftPackageReference "CountryPicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mobven/CountryPicker.git";
 			requirement = {
+				kind = versionRange;
+				maximumVersion = 1.0.8;
+				minimumVersion = 1.0.0;
+			};
+		};
+		9D376F542BB372FA005F6310 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.3;
+				minimumVersion = 3.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9DA9C0AE2BA7462700424987 /* CountryPicker */ = {
+		9D376F522BB36E09005F6310 /* CountryPicker */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9DA9C0AD2BA7462700424987 /* XCRemoteSwiftPackageReference "CountryPicker" */;
+			package = 9D376F512BB36E09005F6310 /* XCRemoteSwiftPackageReference "CountryPicker" */;
 			productName = CountryPicker;
+		};
+		9D376F552BB372FA005F6310 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D376F542BB372FA005F6310 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

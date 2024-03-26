@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SearchTextField: View {
+    
     @State var placholder: String = "Placholder"
     @Binding var txt: String
     
