@@ -23,7 +23,7 @@ struct TabButton: View {
                 Image(icon)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 25, height: 25)
+                    .frame(width: 20, height: 20)
                 
                 
                 Text(title)
@@ -32,8 +32,18 @@ struct TabButton: View {
                     
             }
         }
-        .foregroundColor(isSelect ? .primaryApp : .primaryText )
+        .foregroundColor(isSelect ? Color(hex: "FFC5BB") : .primaryText )
         .frame(minWidth: 0, maxWidth: .infinity)
+//        .background(
+//                    ZStack {
+//                        if isSelect {
+//                            RoundedRectangle(cornerRadius: 5)
+//                                .fill(Color(hex: "FFC5BB"))
+//                        } else {
+//                            Color.clear // Placeholder for background color when not selected
+//                        }
+//                    }
+//                )
     }
 }
 

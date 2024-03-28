@@ -13,21 +13,21 @@ class ProductDetailViewModel: ObservableObject
     @Published var showError = false
     @Published var errorMessage = ""
     
-    @Published var nutritionArr: [NutritionModel] = []
+    @Published var quantityArr: [QuantityModel] = []
     @Published var imageArr: [ImageModel] = []
     
     
     @Published var isFav: Bool = false
     @Published var isShowDetail: Bool = false
-    @Published var isShowNutrition: Bool = false
+    @Published var isShowQuantity: Bool = false
     @Published var qty: Int = 1
     
     func showDetail(){
         isShowDetail = !isShowDetail
     }
     
-    func showNutrition(){
-        isShowNutrition = !isShowNutrition
+    func showQuantity(){
+        isShowQuantity = !isShowQuantity
     }
     
     func addSubQTY(isAdd: Bool = true) {
@@ -63,9 +63,9 @@ class ProductDetailViewModel: ObservableObject
                         
                         self.pObj = ProductModel(dict: payloadObj)
                         
-                        self.nutritionArr = (payloadObj.value(forKey: "nutrition_list") as? NSArray ?? []).map({ obj in
+                        self.quantityArr = (payloadObj.value(forKey: "quantity_list") as? NSArray ?? []).map({ obj in
                             
-                            return NutritionModel(dict: obj as? NSDictionary ?? [:])
+                            return QuantityModel(dict: obj as? NSDictionary ?? [:])
                         })
                         
                         self.imageArr = (payloadObj.value(forKey: "images") as? NSArray ?? []).map({ obj in

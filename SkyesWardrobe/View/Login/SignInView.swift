@@ -127,7 +127,7 @@ struct SignInView: View {
             
         }
         .onAppear{
-            self.countryObj = Country(phoneCode: "94", isoCode: "SL")
+            self.countryObj = Country(phoneCode: "94", isoCode: "LK")
         }
         .sheet(isPresented: $isShowPicker, content: {
             CountryPickerUI(country: $countryObj)
@@ -139,6 +139,13 @@ struct SignInView: View {
     }
 }
 
-#Preview {
-    SignInView()
+//#Preview {
+//    SignInView()
+//}
+
+struct SignInView_Previews: PreviewProvider {
+    static var previews: some View {
+        SignInView()
+    }
 }
+

@@ -7,12 +7,20 @@
 
 import SwiftUI
 
-struct ImageModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+struct ImageModel: Identifiable, Equatable {
+    
+    var id: Int = 0
+    var prodId: Int = 0
+    var image: String = ""
 
-#Preview {
-    ImageModel()
+    init(dict: NSDictionary) {
+        self.id = dict.value(forKey: "img_id") as? Int ?? 0
+        self.image = dict.value(forKey: "image") as? String ?? ""
+        self.prodId = dict.value(forKey: "prod_id") as? Int ?? 0
+       
+    }
+    
+    static func == (lhs: ImageModel, rhs: ImageModel) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

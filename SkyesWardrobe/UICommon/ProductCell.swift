@@ -53,10 +53,10 @@ struct ProductCell: View {
                         
                         didAddCart?()
                     } label: {
-                        Image("add")
+                        Image("icons8-plus-48")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 15, height: 15)
+                            .frame(width: 20, height: 20)
                     }
                     .frame(width: 40, height: 40)
                     .background( Color.primaryApp)
@@ -86,7 +86,7 @@ struct ProductCell_Previews: PreviewProvider {
                                               "cat_id": 1,
                                               "brand_id": 1,
                                               "type_id": 1,
-                                              "name": "Organic Banana",
+                                              "name": "Ripped Jeans",
                                               "detail": "banana, fruit of the genus Musa, of the family Musaceae, one of the most important fruit crops of the world. The banana is grown in the tropics, and, though it is most widely consumed in those regions, it is valued worldwide for its flavour, nutritional value, and availability throughout the year",
                                               "unit_name": "pcs",
                                               "unit_value": "7",

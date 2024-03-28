@@ -5,14 +5,6 @@
 //  Created by Hikma Muneer on 2024-03-27.
 //
 
-//import SwiftUI
-//
-//struct OrderItemRow: View {
-//    var body: some View {
-//        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-//    }
-//}
-//
 //#Preview {
 //    OrderItemRow()
 //}
@@ -59,7 +51,7 @@ struct OrderItemRow: View {
                             .font(.customfont(.bold, fontSize: 16))
                             .foregroundColor(.primaryText)
                         
-                        Text("$ \( pObj.itemPrice, specifier: "%.2f" )")
+                        Text("LKR \( pObj.itemPrice, specifier: "%.2f" )")
                             .font(.customfont(.bold, fontSize: 16))
                             .foregroundColor(.primaryText)
                         
@@ -69,7 +61,7 @@ struct OrderItemRow: View {
                     
                 }
                 
-                Text("$\(pObj.offerPrice ?? pObj.price, specifier: "%.2f" )")
+                Text("LKR \(pObj.offerPrice ?? pObj.price, specifier: "%.2f" )")
                     .font(.customfont(.semibold, fontSize: 18))
                     .foregroundColor(.primaryText)
                 

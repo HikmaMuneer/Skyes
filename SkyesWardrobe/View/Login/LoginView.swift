@@ -118,8 +118,18 @@ struct LoginView: View {
     }
 }
 
-#Preview {
-    NavigationView{
-        LoginView()
+//#Preview {
+//    NavigationView{
+//        LoginView()
+//    }
+//}
+
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        NavigationView {
+            LoginView()
+        }
+        
     }
 }

@@ -74,7 +74,6 @@ class ServiceCall {
                         }
                     }
                    
-                
                 }
                 
               guard let data = data else {

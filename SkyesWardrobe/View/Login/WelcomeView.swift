@@ -58,8 +58,18 @@ struct WelcomeView: View {
 }
 
 
-#Preview {
-    NavigationView{
-        WelcomeView()
+struct WelcomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        NavigationView {
+            WelcomeView()
+        }
+        
     }
 }
+
+//#Preview {
+//    NavigationView{
+//        WelcomeView()
+//    }
+//}
