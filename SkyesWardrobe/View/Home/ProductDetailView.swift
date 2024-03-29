@@ -11,6 +11,11 @@ import SDWebImageSwiftUI
 struct ProductDetailView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @StateObject var detailVM: ProductDetailViewModel = ProductDetailViewModel(prodObj: ProductModel(dict: [:]) )
+    let colors: [Color] = [.black, .gray, Color(hex: "FFC5BB"), Color(hex: "C3E1EB"), Color(hex: "7AB485")] // Example colors
+    let sizes = ["UK 4", "UK 6", "UK 8", "UK 10"]
+    @State private var selectedColor: Color?
+    @State private var selectedSize: String?
+
     
     var body: some View {
         ZStack{
@@ -20,7 +25,6 @@ struct ProductDetailView: View {
                       Rectangle()
                         .foregroundColor( Color(hex: "F2F2F2") )
                         .frame(width: .screenWidth, height: .screenWidth * 0.8)
-//                        .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                     
                     WebImage(url: URL(string: detailVM.pObj.image ))
                         .resizable()
@@ -35,7 +39,7 @@ struct ProductDetailView: View {
                         .frame(width: .screenWidth, height: .screenWidth * 0.8)
                         .foregroundColor(.clear)
                         .border(Color.clear, width: 0)
-                        .padding(.bottom, 0) // Adjust padding if necessary
+                        .padding(.bottom, 0)
                 )
                 
                 VStack{
@@ -104,9 +108,12 @@ struct ProductDetailView: View {
                     .padding(.vertical, 8)
                     
                     Divider()
+                    
                 }
                 .padding(.horizontal, 20)
                 .padding(.top, 20)
+                
+                
                 
                 VStack{
                     HStack{
@@ -144,97 +151,89 @@ struct ProductDetailView: View {
                 }
                 .padding(.horizontal, 20)
                 
-                VStack{
-                    HStack{
-                        Text("Available Pcs")
-                            .font(.customfont(.semibold, fontSize: 16))
-                            .foregroundColor(.primaryText)
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        
-                        
-                        Text(detailVM.pObj.nutritionWeight)
-                            .font(.customfont(.semibold, fontSize: 10))
-                            .foregroundColor(.secondaryText)
-                            .padding(8)
-                            .background( Color.placeholder.opacity(0.5) )
-                            .cornerRadius(5)
-                        
-                        Button {
-                            withAnimation {
-                                detailVM.showQuantity()
-                            }
-                            
-                        } label: {
-                            
-                            Image( detailVM.isShowQuantity ? "detail_open" : "icons8-next-50"  )
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 15, height: 15)
-                                .padding(15)
-                        }
-                        .foregroundColor(Color.primaryText)
 
-                    }
-                    
-                    if(detailVM.isShowQuantity) {
-                        LazyVStack {
-                            
-                            ForEach( detailVM.quantityArr , id: \.id) { nObj in
-                                HStack{
-                                    Text( nObj.quantityName )
-                                        .font(.customfont(.semibold, fontSize: 15))
-                                        .foregroundColor(.secondaryText)
-                                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                    
-                                    Text( nObj.quantityValue )
-                                        .font(.customfont(.semibold, fontSize: 15))
-                                        .foregroundColor(.primaryText)
+                VStack {
+                            HStack {
+                                Text("Size")
+                                    .font(.customfont(.semibold, fontSize: 16))
+                                    .foregroundColor(.primaryText)
+                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                
+                                Text(detailVM.pObj.nutritionWeight)
+                                    .font(.customfont(.semibold, fontSize: 10))
+                                    .foregroundColor(.secondaryText)
+                                    .padding(8)
+                                    .background( Color.placeholder.opacity(0.5) )
+                                    .cornerRadius(5)
+                                
+                                Button {
+                                    withAnimation {
+                                        detailVM.showQuantity()
+                                    }
+                                } label: {
+                                    Image( detailVM.isShowQuantity ? "detail_open" : "icons8-next-50"  )
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 15, height: 15)
+                                        .padding(15)
                                 }
-                                
-                                Divider()
+                                .foregroundColor(Color.primaryText)
                             }
-                            .padding(.vertical, 0)
-                           
+                            .padding(.horizontal, 20)
                             
+                            if detailVM.isShowQuantity {
+                                ScrollView(.horizontal, showsIndicators: false) {
+                                    HStack(spacing: 10) {
+                                        ForEach(sizes, id: \.self) { size in
+                                            Button(action: {
+                                                // Action when size button is tapped
+                                                selectedSize = size
+                                            }) {
+                                                Text(size)
+                                                    .font(.customfont(.semibold, fontSize: 15))
+                                                    .foregroundColor(.primaryText)
+                                                    .padding(.horizontal, 15)
+                                                    .padding(.vertical, 8)
+                                                    .background(
+                                                        RoundedRectangle(cornerRadius: 5)
+                                                            .fill(selectedSize == size ? Color.secondaryText.opacity(0.5) : Color.secondaryText.opacity(0.2))
+                                                    )
+                                            }
+                                            .buttonStyle(PlainButtonStyle())
+                                        }
+                                    }
+                                    .padding(.horizontal, 10)
+                                }
+                            }
+                            
+                            Divider()
                         }
-                        .padding(.horizontal, 10)
-                    }
-                    
-                    
-                    Divider()
-                }
-                .padding(.horizontal, 20)
+                        .padding(.horizontal, 20)
                 
-                HStack{
-                    Text("Review")
-                        .font(.customfont(.semibold, fontSize: 16))
-                        .foregroundColor(.primaryText)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    
-                    HStack(spacing: 2){
-                        ForEach( 1...5 , id: \.self) { index in
+                
+
+                VStack {
+                            Text("Colors")
+                                .font(.customfont(.semibold, fontSize: 16))
+                                .foregroundColor(.primaryText)
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             
-                            Image(systemName:  "star.fill")
-                                .resizable()
-                                .scaledToFit()
-                                    .foregroundColor( Color.orange)
-                                    .frame(width: 15, height: 15)
-                                
+                            HStack(spacing: 10) {
+                                ForEach(colors, id: \.self) { color in
+                                    Button(action: {
+                                        selectedColor = color
+                                    }) {
+                                        Circle()
+                                            .fill(color)
+                                            .frame(width: 20, height: 20)
+                                            .overlay(
+                                                Circle().stroke(Color.white, lineWidth: selectedColor == color ? 2 : 0)
+                                            )
+                                    }
+                                    .buttonStyle(PlainButtonStyle())
+                            }
                         }
-                    }
-                    
-                    Button {
-                       
-                        
-                    } label: {
-                        
-                        Image( "icons8-next-50" )
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 15, height: 15)
-                            .padding(15)
-                    }
-                    .foregroundColor(Color.primaryText)
+                   
 
                 }
                 .padding(.horizontal, 20)
@@ -258,7 +257,7 @@ struct ProductDetailView: View {
                     Button {
                         mode.wrappedValue.dismiss()
                     } label: {
-                        Image("back")
+                        Image("icons8-back-50")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 25, height: 25)
@@ -284,7 +283,7 @@ struct ProductDetailView: View {
         }
         .alert(isPresented: $detailVM.showError, content: {
             
-            Alert(title: Text(Globs.AppName), message: Text(detailVM.errorMessage)  , dismissButton: .default(Text("Ok"))  )
+            Alert(title: Text(Globs.AppName), message: Text(detailVM.errorMessage)  , dismissButton: .default(Text("OK"))  )
         })
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)

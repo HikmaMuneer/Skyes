@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 
 struct ProductCell: View {
     @State var pObj: ProductModel = ProductModel(dict: [:])
-    @State var width:Double = 180.0
+    @State var width: Double = 200.0
     var didAddCart: ( ()->() )?
     
     
@@ -22,7 +22,7 @@ struct ProductCell: View {
                 
                 WebImage(url: URL(string: pObj.image ))
                     .resizable()
-                    .indicator(.activity) // Activity Indicator
+                    .indicator(.activity)
                     .transition(.fade(duration: 0.5))
                     .scaledToFit()
                     .frame(width: 100, height: 80)

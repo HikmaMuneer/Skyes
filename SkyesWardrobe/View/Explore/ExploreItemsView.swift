@@ -38,13 +38,26 @@ struct ExploreItemsView: View {
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
                         
                     
-                    Button {
-                    } label: {
+//                    Button {
+//                    } label: {
+//                        Image("filter")
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(width: 20, height: 20)
+//                    }
+                    
+                    
+                    //---------------------------------------------
+                    Button(action: {
+                        itemsVM.toggleSortingOrder() 
+                    }) {
                         Image("filter")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 20, height: 20)
                     }
+                    
+                    //---------------------------------------------
 
                 }
                 
