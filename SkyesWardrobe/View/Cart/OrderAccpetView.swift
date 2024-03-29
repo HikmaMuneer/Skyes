@@ -13,7 +13,7 @@ struct OrderAccpetView: View {
     
     var body: some View {
         ZStack{
-            Image("bottom_bg")
+            Image("SignIn_BG")
             .resizable()
             .scaledToFill()
             .frame(width: .screenWidth, height: .screenHeight)

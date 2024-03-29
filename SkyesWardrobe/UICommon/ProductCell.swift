@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 
 struct ProductCell: View {
     @State var pObj: ProductModel = ProductModel(dict: [:])
-    @State var width: Double = 200.0
+    @State var width: Double = 180.0
     var didAddCart: ( ()->() )?
     
     
@@ -67,7 +67,7 @@ struct ProductCell: View {
                 
             }
             .padding(15)
-            .frame(width: width, height: 230)
+            .frame(width: width, height: 200)
             .overlay(
                 RoundedRectangle(cornerRadius: 16)
                     .stroke(  Color.placeholder.opacity(0.5), lineWidth: 1)

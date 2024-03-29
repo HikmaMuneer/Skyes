@@ -187,13 +187,13 @@ struct CheckoutView: View {
                 
                 VStack{
                     HStack {
-                        Text("Totat")
+                        Text("Total")
                             .font(.customfont(.semibold, fontSize: 16))
                             .foregroundColor(.secondaryText)
                         
                         Spacer()
                         
-                        Text("LKR \(cartVM.total)")
+                        Text("LKR\(cartVM.total)")
                             .font(.customfont(.semibold, fontSize: 16))
                             .foregroundColor(.secondaryText)
                     }
@@ -205,7 +205,7 @@ struct CheckoutView: View {
                         
                         Spacer()
                         
-                        Text("+ LKR \(cartVM.deliverPriceAmount)")
+                        Text("+ LKR\(cartVM.deliverPriceAmount)")
                             .font(.customfont(.semibold, fontSize: 16))
                             .foregroundColor(.secondaryText)
                     }
@@ -217,7 +217,7 @@ struct CheckoutView: View {
                         
                         Spacer()
                         
-                        Text("- LKR \(cartVM.discountAmount)")
+                        Text("- LKR\(cartVM.discountAmount)")
                             .font(.customfont(.semibold, fontSize: 16))
                             .foregroundColor(.red)
                     }
@@ -233,9 +233,7 @@ struct CheckoutView: View {
                         .frame(height: 46)
                     
                     Spacer()
-                    
-                    
-                    
+                                        
                     Text("LKR\(cartVM.userPayAmount)")
                         .font(.customfont(.semibold, fontSize: 18))
                         .foregroundColor(.primaryText)

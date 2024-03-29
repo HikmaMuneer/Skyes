@@ -31,9 +31,9 @@ class CartViewModel: ObservableObject
     @Published var paymentObj: PaymentModel?
     @Published var promoObj: PromoCodeModel?
     
-    @Published var deliverPriceAmount: String = ""
-    @Published var discountAmount: String = ""
-    @Published var userPayAmount: String = ""
+    @Published var deliverPriceAmount: String = "0.0"
+    @Published var discountAmount: String = "0.0"
+    @Published var userPayAmount: String = "0.0"
     
     
     init() {

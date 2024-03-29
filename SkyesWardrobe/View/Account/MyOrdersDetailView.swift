@@ -44,12 +44,12 @@ struct MyOrdersDetailView: View {
                     }
                     .padding(.bottom, 8)
                     
-                    Text("\(detailVM.pObj.address),\(detailVM.pObj.city), \(detailVM.pObj.state), \(detailVM.pObj.postalCode) ")
-                        .font(.customfont(.regular, fontSize: 16))
-                        .foregroundColor(.secondaryText)
-                        .multilineTextAlignment( .leading)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        .padding(.bottom, 8)
+//                    Text("\(detailVM.pObj.address),\(detailVM.pObj.city), \(detailVM.pObj.state), \(detailVM.pObj.postalCode) ")
+//                        .font(.customfont(.regular, fontSize: 16))
+//                        .foregroundColor(.secondaryText)
+//                        .multilineTextAlignment( .leading)
+//                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+//                        .padding(.bottom, 8)
                     
                     HStack{
                         Text("Delivery Type:")
