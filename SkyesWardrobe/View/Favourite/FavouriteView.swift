@@ -55,8 +55,7 @@ struct FavouriteView: View {
                     .padding(.bottom, .bottomInsets + 80)
                 
             }
-            
-            
+                        
             
         }
         .onAppear{

@@ -70,7 +70,7 @@ struct AccountView: View {
                             NavigationLink {
                                 PaymentMethodsView()
                             } label: {
-                                AccountRow(title: "Payment Methods", icon: "paymenth_methods")
+                                AccountRow(title: "Payment Methods", icon: "payment_methods")
                             }
 
                             NavigationLink {
