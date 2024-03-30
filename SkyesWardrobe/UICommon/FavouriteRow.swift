@@ -40,7 +40,7 @@ struct FavouriteRow: View {
                         .foregroundColor(.primaryText)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     
-                    Text("\(fObj.unitValue)\(fObj.unitName), price")
+                    Text("\(fObj.unitValue)\(fObj.unitName)")
                         .font(.customfont(.medium, fontSize: 14))
                         .foregroundColor(.secondaryText)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -50,8 +50,8 @@ struct FavouriteRow: View {
                 Text("LKR \(fObj.offerPrice ?? fObj.price, specifier: "%.2f" )")
                     .font(.customfont(.semibold, fontSize: 18))
                     .foregroundColor(.primaryText)
-                    
-                Image("next")
+                
+                Image("icons8-next-50")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 15, height: 15)

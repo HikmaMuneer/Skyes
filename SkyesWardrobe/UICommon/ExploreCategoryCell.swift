@@ -33,19 +33,19 @@ struct ExploreCategoryCell: View {
                 .indicator(.activity) // Activity Indicator
                 .transition(.fade(duration: 0.5))
                 .scaledToFit()
-                .frame(width: 120, height: 90)
+                .frame(width: 50, height: 50)
             
         
             Spacer()
             Text(cObj.name)
-                .font(.customfont(.bold, fontSize: 16))
+                .font(.customfont(.bold, fontSize: 12))
                 .foregroundColor(.primaryText)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
             
             Spacer()
             
         }
-        .padding(15)
+        .padding(10)
         .background( cObj.color.opacity(0.3) )
         .cornerRadius(16)
         .overlay (
@@ -60,7 +60,7 @@ struct ExploreCategoryCell_Previews: PreviewProvider {
                                                                "cat_name": "Womens",
                                                                "image": "http://localhost:3001/app/img/category/202403290438143814cVlTMVZOt1.png",
                                                                "color": "F8A44C"]) )
-        .padding(20)
+        .padding(10)
     }
 }
 

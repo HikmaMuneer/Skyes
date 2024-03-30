@@ -30,7 +30,7 @@ struct AccountRow: View {
                     .foregroundColor(.primaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 
-                Image("next")
+                Image("icons8-next-50")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 15, height: 15 )

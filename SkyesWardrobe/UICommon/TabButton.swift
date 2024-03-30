@@ -29,31 +29,15 @@ struct TabButton: View {
                 Text(title)
                     .font(.customfont(.semibold, fontSize: 14))
                 
-                    
+                
             }
         }
         .foregroundColor(isSelect ? Color(hex: "FFC5BB") : .primaryText )
         .frame(minWidth: 0, maxWidth: .infinity)
-//        .background(
-//                    ZStack {
-//                        if isSelect {
-//                            RoundedRectangle(cornerRadius: 5)
-//                                .fill(Color(hex: "FFC5BB"))
-//                        } else {
-//                            Color.clear // Placeholder for background color when not selected
-//                        }
-//                    }
-//                )
+        
     }
 }
 
-//struct TabButton_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TabButton {
-//            print("Test")
-//        }
-//    }
-//}
 
 
 #Preview {

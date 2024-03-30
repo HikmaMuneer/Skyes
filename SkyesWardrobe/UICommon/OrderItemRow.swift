@@ -40,19 +40,19 @@ struct OrderItemRow: View {
                     
                     HStack {
                         Text("QTY:")
-                            .font(.customfont(.bold, fontSize: 16))
+                            .font(.customfont(.bold, fontSize: 14))
                             .foregroundColor(.primaryText)
                         
                         Text("\( pObj.qty )")
-                            .font(.customfont(.bold, fontSize: 16))
+                            .font(.customfont(.bold, fontSize: 14))
                             .foregroundColor(.primaryText)
                         
                         Text("×")
-                            .font(.customfont(.bold, fontSize: 16))
+                            .font(.customfont(.bold, fontSize: 14))
                             .foregroundColor(.primaryText)
                         
                         Text("LKR \( pObj.itemPrice, specifier: "%.2f" )")
-                            .font(.customfont(.bold, fontSize: 16))
+                            .font(.customfont(.bold, fontSize: 14))
                             .foregroundColor(.primaryText)
                         
                         
@@ -62,7 +62,7 @@ struct OrderItemRow: View {
                 }
                 
                 Text("LKR \(pObj.offerPrice ?? pObj.price, specifier: "%.2f" )")
-                    .font(.customfont(.semibold, fontSize: 18))
+                    .font(.customfont(.semibold, fontSize: 16))
                     .foregroundColor(.primaryText)
                 
                 

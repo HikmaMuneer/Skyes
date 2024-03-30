@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 
 struct ProductCell: View {
     @State var pObj: ProductModel = ProductModel(dict: [:])
-    @State var width: Double = 180.0
+    @State var width: Double = 150.0
     var didAddCart: ( ()->() )?
     
     
@@ -25,17 +25,17 @@ struct ProductCell: View {
                     .indicator(.activity)
                     .transition(.fade(duration: 0.5))
                     .scaledToFit()
-                    .frame(width: 100, height: 80)
+                    .frame(width: 100, height: 100)
                 
                 Spacer()
                 
                 Text(pObj.name)
-                    .font(.customfont(.bold, fontSize: 16))
+                    .font(.customfont(.bold, fontSize: 12))
                     .foregroundColor(.primaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 
                 Text("\(pObj.unitValue)\(pObj.unitName)")
-                    .font(.customfont(.medium, fontSize: 14))
+                    .font(.customfont(.medium, fontSize: 10))
                     .foregroundColor(.secondaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 
@@ -43,7 +43,7 @@ struct ProductCell: View {
                 
                 HStack{
                     Text("LKR \(pObj.offerPrice ?? pObj.price, specifier: "%.2f" )")
-                        .font(.customfont(.semibold, fontSize: 18))
+                        .font(.customfont(.semibold, fontSize: 10))
                         .foregroundColor(.primaryText)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     
@@ -56,10 +56,10 @@ struct ProductCell: View {
                         Image("icons8-plus-48")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 20, height: 20)
+                            .frame(width: 30, height: 30)
                     }
                     .frame(width: 40, height: 40)
-                    .background( Color.primaryApp)
+//                    .background( Color.primaryApp)
                     .cornerRadius(15)
                     
                     
@@ -79,23 +79,7 @@ struct ProductCell: View {
 
 struct ProductCell_Previews: PreviewProvider {
     static var previews: some View {
-        ProductCell(pObj: ProductModel(dict: ["offer_price": 4500.00,
-                                              "start_date": "2023-07-30T18:30:00.000Z",
-                                              "end_date": "2023-08-29T18:30:00.000Z",
-                                              "prod_id": 5,
-                                              "cat_id": 1,
-                                              "brand_id": 1,
-                                              "type_id": 1,
-                                              "name": "Ripped Jeans",
-                                              "detail": "banana, fruit of the genus Musa, of the family Musaceae, one of the most important fruit crops of the world. The banana is grown in the tropics, and, though it is most widely consumed in those regions, it is valued worldwide for its flavour, nutritional value, and availability throughout the year",
-                                              "unit_name": "pcs",
-                                              "unit_value": "7",
-                                              "nutrition_weight": "200g",
-                                              "price": 2.99,
-                                              "image": "http://192.168.1.3:3001/img/product/202307310947354735xuruflIucc.png",
-                                              "cat_name": "Frash Fruits & Vegetable",
-                                              "type_name": "Pulses",
-                                              "is_fav": 1])) {
+        ProductCell(pObj: ProductModel(dict: [:])) {
             
         }
     }

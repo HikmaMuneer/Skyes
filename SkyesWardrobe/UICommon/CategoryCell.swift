@@ -21,18 +21,18 @@ struct CategoryCell: View {
                 .indicator(.activity) // Activity Indicator
                 .transition(.fade(duration: 0.5))
                 .scaledToFit()
-                .frame(width: 70, height: 70)
+                .frame(width: 50, height: 50)
             
         
             
             Text(tObj.name)
-                .font(.customfont(.bold, fontSize: 16))
+                .font(.customfont(.bold, fontSize: 10))
                 .foregroundColor(.primaryText)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             
         }
         .padding(15)
-        .frame(width: 250, height: 100)
+        .frame(width: 150, height: 80)
         .background( tObj.color.opacity(0.3) )
         .cornerRadius(16)
     }
