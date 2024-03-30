@@ -16,7 +16,8 @@ class ProductDetailViewModel: ObservableObject
     @Published var quantityArr: [QuantityModel] = []
     @Published var imageArr: [ImageModel] = []
     
-    
+    @Published var colors: [Color] = [.black, .gray, Color(hex: "FFC5BB"), Color(hex: "C3E1EB"), Color(hex: "7AB485")]
+    @Published var sizes: [String] = ["UK 4", "UK 6", "UK 8", "UK 10"]
     @Published var isFav: Bool = false
     @Published var isShowDetail: Bool = false
     @Published var isShowQuantity: Bool = false

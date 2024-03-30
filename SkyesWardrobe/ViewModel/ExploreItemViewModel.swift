@@ -15,6 +15,7 @@ class ExploreItemViewModel: ObservableObject
     
     @Published var listArr: [ProductModel] = []
     @Published var isAscendingOrder = true
+    @Published var isImageToggled = false
     
     
     init(catObj: ExploreCategoryModel) {

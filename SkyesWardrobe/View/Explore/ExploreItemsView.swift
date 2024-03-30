@@ -49,12 +49,13 @@ struct ExploreItemsView: View {
                     
                     //---------------------------------------------
                     Button(action: {
-                        itemsVM.toggleSortingOrder() 
+                        itemsVM.toggleSortingOrder()
+                        itemsVM.isImageToggled.toggle()
                     }) {
-                        Image("filter")
+                        Image(itemsVM.isImageToggled ? "icons8-sort-60" : "icons8-sort-64")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 20, height: 20)
+                            .frame(width: 30, height: 30)
                     }
                     
                     //---------------------------------------------
@@ -96,11 +97,8 @@ struct ExploreItemsView: View {
 struct ExploreItemsView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ExploreItemsView(itemsVM: ExploreItemViewModel(catObj: ExploreCategoryModel(dict: [
-                "cat_id": 1,
-                "cat_name": "Denims",
-                "image": "http://192.168.1.3:3001/img/category/20230726155407547qM5gSxkrCh.png",
-                "color": "53B175"
+            ExploreItemsView(itemsVM: ExploreItemViewModel(catObj: ExploreCategoryModel(dict: [:
+             
             ] ) ))
         }
         

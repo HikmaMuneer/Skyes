@@ -71,21 +71,26 @@ struct MyDetailsView: View {
                     .padding(.bottom, 20)
                     
                     LineTextField(title: "Username", placeholder: "Enter your username" , txt: $myVM.txtUsername)
-                        .padding(.bottom, 40)
+                        .padding(.bottom, 100)
                     
                                        
-                    RoundButton(title: "Update") {
-                        myVM.serviceCallUpdate()
-                    }
-                    .padding(.bottom, 15)
+                    
                     
                     NavigationLink {
                         ChangePasswordView()
                     } label: {
                         Text("Change Password")
                             .font(.customfont(.bold, fontSize: 18))
-                            .foregroundColor(.primaryApp)
+                            .foregroundColor(Color(hex: "FFC5BB"))
                     }
+                    
+                    .padding(.bottom, 15)
+                    
+                    RoundButton(title: "Update Profile") {
+                        myVM.serviceCallUpdate()
+                    }
+                    
+                    
 
                     
                 }
