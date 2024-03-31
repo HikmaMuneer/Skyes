@@ -17,13 +17,17 @@ class ExploreItemViewModel: ObservableObject
     @Published var isAscendingOrder = true
     @Published var isImageToggled = false
     
+    // New properties for filter
+    @Published var minPrice: Double = 0
+    @Published var maxPrice: Double = Double.infinity
+    
     
     init(catObj: ExploreCategoryModel) {
         self.cObj = catObj
         
         serviceCallList()
     }
-    
+
     //MARK: ServiceCall
     
     func serviceCallList(){
@@ -46,12 +50,21 @@ class ExploreItemViewModel: ObservableObject
         }
     }
     
+//    private func updateProductList(from response: NSDictionary) {
+//            self.listArr = (response.value(forKey: KKey.payload) as? NSArray ?? []).map { obj in
+//                return ProductModel(dict: obj as? NSDictionary ?? [:])
+//            }
+//            sortProducts()
+//        }
+    
+    // Update product list with filtering
     private func updateProductList(from response: NSDictionary) {
-            self.listArr = (response.value(forKey: KKey.payload) as? NSArray ?? []).map { obj in
-                return ProductModel(dict: obj as? NSDictionary ?? [:])
-            }
-            sortProducts()
+        listArr = (response.value(forKey: KKey.payload) as? NSArray ?? []).map { obj in
+            return ProductModel(dict: obj as? NSDictionary ?? [:])
         }
+        sortAndFilterProducts()
+    }
+    
     
     private func sortProducts() {
         self.listArr.sort { product1, product2 in
@@ -61,9 +74,36 @@ class ExploreItemViewModel: ObservableObject
         }
     }
     
-    func toggleSortingOrder() {
-            isAscendingOrder.toggle()
-            sortProducts()
-        }
+//    func toggleSortingOrder() {
+//            isAscendingOrder.toggle()
+//            sortProducts()
+//        }
     
+    // Toggle sorting order
+    func toggleSortingOrder() {
+        isAscendingOrder.toggle()
+        sortAndFilterProducts()
+    }
+    
+    private func filterProductsByPrice() {
+        listArr = listArr.filter { product in
+            let price = product.offerPrice ?? product.price
+            return price >= minPrice && price <= maxPrice
+        }
+    }
+        
+        
+        // Sort and filter products
+    private func sortAndFilterProducts() {
+        sortProducts()
+        filterProductsByPrice()
+    }
+        
+        
+        // Set price range and update product list
+    func setPriceRange(minPrice: Double, maxPrice: Double) {
+        self.minPrice = minPrice
+        self.maxPrice = maxPrice
+        sortAndFilterProducts()
+    }
 }

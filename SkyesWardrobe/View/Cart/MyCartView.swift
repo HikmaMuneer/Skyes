@@ -33,7 +33,6 @@ struct MyCartView: View {
                 
             }
             
-            
             VStack {
                 
                 HStack{
@@ -59,7 +58,7 @@ struct MyCartView: View {
                         ZStack {
                             Text("Check Out")
                                 .font(.customfont(.semibold, fontSize: 18))
-                                .foregroundColor(.white)
+                                .foregroundColor(.black)
                                 .multilineTextAlignment(.center)
                             
                             HStack {
