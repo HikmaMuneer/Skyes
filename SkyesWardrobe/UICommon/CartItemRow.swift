@@ -41,6 +41,32 @@ struct CartItemRow: View {
                         
                     }
                     
+                    HStack {
+                        
+                        Text("Color : ")
+                            .font(.customfont(.semibold, fontSize: 12))
+                            .foregroundColor(.secondaryText)
+                        
+                        if !cObj.userColor.isEmpty {
+                            Circle()
+                                .foregroundColor(Color(hex: cObj.userColor))
+                                .frame(width: 15, height: 15)
+                                .overlay(
+                                    Circle()
+                                        .stroke(Color.black , lineWidth: 3)
+                                )
+                        }
+                        Spacer()
+                    }
+                                        
+                    HStack {
+                        Text("Size : \(cObj.size ?? "")")
+                            .font(.customfont(.semibold, fontSize: 12))
+                            .foregroundColor(.secondaryText)
+                        
+                        Spacer()
+                    }
+                    
                     
                     HStack{
                         Button {

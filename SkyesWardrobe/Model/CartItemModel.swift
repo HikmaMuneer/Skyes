@@ -32,6 +32,8 @@ struct CartItemModel:  Identifiable, Equatable {
     var itemPrice: Double?
     var totalPrice: Double?
     var isFav: Bool = false
+    var userColor: String = ""
+    var size: String = ""
     
 
     init(dict: NSDictionary) {
@@ -45,6 +47,8 @@ struct CartItemModel:  Identifiable, Equatable {
         self.brandId = dict.value(forKey: "brand_id") as? Int ?? 0
         self.typeId = dict.value(forKey: "type_id") as? Int ?? 0
         self.isFav = dict.value(forKey: "is_fav") as? Int ?? 0 == 1
+        self.userColor = dict.value(forKey: "color") as? String ?? ""
+        self.size = dict.value(forKey: "size") as? String ?? ""
         
         self.detail = dict.value(forKey: "detail") as? String ?? ""
         self.name = dict.value(forKey: "name") as? String ?? ""

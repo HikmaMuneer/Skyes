@@ -34,6 +34,8 @@ class CartViewModel: ObservableObject
     @Published var deliverPriceAmount: String = "0.0"
     @Published var discountAmount: String = "0.0"
     @Published var userPayAmount: String = "0.0"
+    @Published var userColor : String = ""
+    @Published var userSize : String = ""
     
     
     init() {
@@ -53,7 +55,8 @@ class CartViewModel: ObservableObject
                     self.discountAmount = response.value(forKey: "discount_amount") as? String ?? "0.0"
                     self.deliverPriceAmount = response.value(forKey: "deliver_price_amount") as? String ?? "0.0"
                     self.userPayAmount = response.value(forKey: "user_pay_price") as? String ?? "0.0"
-                    
+                    self.userColor = response.value(forKey: "color") as? String ?? ""
+                    self.userSize = response.value(forKey: "size") as? String ?? ""
                    
                     self.listArr = (response.value(forKey: KKey.payload) as? NSArray ?? []).map({ obj in
                         return CartItemModel(dict: obj as? NSDictionary ?? [:])
@@ -64,6 +67,8 @@ class CartViewModel: ObservableObject
                     self.discountAmount = response.value(forKey: "discount_amount") as? String ?? "0.0"
                     self.deliverPriceAmount = response.value(forKey: "deliver_price_amount") as? String ?? "0.0"
                     self.userPayAmount = response.value(forKey: "user_pay_price") as? String ?? "0.0"
+                    self.userColor = response.value(forKey: "color") as? String ?? ""
+                    self.userSize = response.value(forKey: "size") as? String ?? ""
                     
                     self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
                     self.showError = true

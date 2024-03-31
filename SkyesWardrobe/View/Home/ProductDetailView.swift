@@ -13,7 +13,7 @@ struct ProductDetailView: View {
     @StateObject var detailVM: ProductDetailViewModel = ProductDetailViewModel(prodObj: ProductModel(dict: [:]) )
     @State private var selectedColor: String?
     @State private var selectedSize: String?
-
+   
     
     var body: some View {
         ZStack{
@@ -189,6 +189,9 @@ struct ProductDetailView: View {
                                 }
                             }
                         }
+                        .onAppear {
+                            selectedSize = detailVM.sizeArr.first
+                        }
                     }
                     Divider()
                 }
@@ -234,26 +237,33 @@ struct ProductDetailView: View {
                                             .frame(width: 15, height: 15)
                                             .overlay(
                                                 Circle()
-                                                    .stroke(selectedColor == color ? Color.blue : Color.clear, lineWidth: 2)
+                                                    .stroke(selectedColor == color ? Color.black : Color.clear, lineWidth: 3)
                                             )
                                         
                                     }
                                     .padding(.horizontal, 8)
+                                    .padding(.top, 10)
+                                    .padding(.bottom, 8)
                                 }
                                 
                                 
                             }
                             .padding(.horizontal, 8)
                         }
+                        .onAppear {
+                            // Set the initial selected color and size to the first elements of their respective arrays
+                            selectedColor = detailVM.colorArr.first
+                        }
                     }
                 }
+               
                 .padding(.horizontal, 20)
                     
                     //----------
                     
                 
                 RoundButton(title: "Add To Basket") {
-                    CartViewModel.serviceCallAddToCart(prodId: detailVM.pObj.prodId, qty: detailVM.qty, color: selectedColor ?? "FFFFFF", size: selectedSize ?? "UK 4" ) { isDone, msg  in
+                    CartViewModel.serviceCallAddToCart(prodId: detailVM.pObj.prodId, qty: detailVM.qty, color: selectedColor ?? "000000", size: selectedSize ?? "UK 4" ) { isDone, msg  in
                         
                         detailVM.qty = 1
                         

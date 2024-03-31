@@ -14,7 +14,7 @@ struct MyCartView: View {
         ZStack{
             
             if(cartVM.listArr.count == 0) {
-                Text("You Cart is Empty")
+                Text("Your Cart is Empty")
                     .font(.customfont(.bold, fontSize: 18))
             }
             
@@ -34,6 +34,7 @@ struct MyCartView: View {
                 
             }
             
+            
             VStack {
                 
                 HStack{
@@ -52,38 +53,48 @@ struct MyCartView: View {
                 
                 Spacer()
                 
-                if(cartVM.listArr.count > 0) {
-                    Button {
-                        cartVM.showCheckout = true
-                    } label: {
-                        ZStack {
-                            Text("Check Out")
-                                .font(.customfont(.semibold, fontSize: 12))
-                                .foregroundColor(.black)
-                                .multilineTextAlignment(.center)
-                            
-                            HStack {
-                                Spacer()
-                                Text("LKR \(cartVM.total)")
-                                    .font(.customfont(.semibold, fontSize: 14))
-                                    .foregroundColor(.black)
-                                    .padding(.horizontal, 8)
-                                    .padding(.vertical, 4)
-                                    .background(Color.darkGray.opacity(0.2))
-                                    .cornerRadius(5)
+                HStack(spacing: 15) {
+
+                    VStack(spacing: 6){
+                        Text("Total : LKR \(cartVM.total)")
+                            .font(.customfont(.bold, fontSize: 18))
+                            .foregroundColor(.primaryText)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                            .padding(.bottom, 10)
+                            .padding(.top, 10)
+                        
+                        if(cartVM.listArr.count > 0) {
+                            Button {
+                                cartVM.showCheckout = true
+                            } label: {
+                                ZStack {
+                                    
+                                    Text("Go to Check Out")
+                                        .font(.customfont(.semibold, fontSize: 14))
+                                        .foregroundColor(.black)
+                                        .multilineTextAlignment(.center)
+                                    
+                                    
+                                }
+                                
                             }
-                            .padding(.trailing)
+                            .frame( minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60 )
+                            .background( Color.primaryApp)
+                            .cornerRadius(20)
+                            .padding(.horizontal, 20)
+                            .padding(.bottom, .bottomInsets + 80)
+                            
+                            
                         }
                         
                     }
-                    .frame( minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60 )
-                    .background( Color.primaryApp)
-                    .cornerRadius(20)
-                    .padding(.horizontal, 20)
-                    .padding(.bottom, .bottomInsets + 80)
-                    
-                    
                 }
+                .background(Color.white)
+                .cornerRadius(5)
+                .shadow(color: Color.black.opacity(0.15), radius: 2)
+
+                
+                
                 
             }
             if(cartVM.showCheckout) {

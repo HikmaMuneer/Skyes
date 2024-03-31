@@ -60,7 +60,7 @@ struct ExploreItemsView: View {
                         ForEach(itemsVM.listArr, id: \.id) {
                             pObj in
                             ProductCell( pObj: pObj, width: .infinity ) {
-                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1, color: "FFFFFF", size: "UK 4") { isDone, msg in
+                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1, color: "000000", size: "UK 4") { isDone, msg in
                                     
                                     self.itemsVM.errorMessage = msg
                                     self.itemsVM.showError = true

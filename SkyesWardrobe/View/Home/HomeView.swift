@@ -55,7 +55,7 @@ struct HomeView: View {
                             
                             ProductCell(pObj: pObj, didAddCart: {
                                 
-                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1, color: "FFFFFF", size: "UK 4") { isDone, msg in
+                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1, color: "000000", size: "UK 4") { isDone, msg in
                                     
                                     self.homeVM.errorMessage = msg
                                     self.homeVM.showError = true
