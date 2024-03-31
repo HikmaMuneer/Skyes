@@ -13,8 +13,8 @@ struct ExploreItemsView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @StateObject var itemsVM = ExploreItemViewModel(catObj: ExploreCategoryModel (dict: [:]))
     @State private var minPrice: Double = 0
-    @State private var maxPrice: Double = 100000 // Default maximum price
-    @State private var isFiltering = false // Flag to control filter UI
+    @State private var maxPrice: Double = 100000 
+    @State private var isFiltering = false
     
     var columns = [
         GridItem(.flexible(), spacing: 15),
@@ -41,9 +41,7 @@ struct ExploreItemsView: View {
                         .font(.customfont(.bold, fontSize: 20))
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
                         
-                    
-                    
-                    //---------------------------------------------
+
                     Button(action: {
                         itemsVM.toggleSortingOrder()
                         itemsVM.isImageToggled.toggle()
@@ -53,10 +51,8 @@ struct ExploreItemsView: View {
                             .scaledToFit()
                             .frame(width: 30, height: 30)
                     }
-                    //---------------------------------------------
+
                 }
-                
-                
                 
                 ScrollView {
                     LazyVGrid(columns: columns,  spacing:15) {
@@ -78,7 +74,7 @@ struct ExploreItemsView: View {
                 }
                 
                 Button(action: {
-                                isFiltering.toggle() // Toggle filter UI
+                                isFiltering.toggle()
                             }) {
                                 Image(systemName: "line.horizontal.3.decrease.circle")
                                     .resizable()
@@ -86,39 +82,37 @@ struct ExploreItemsView: View {
                                     .frame(width: 25, height: 25)
                                     .padding()
                                     .background(Color.white)
+                                    .foregroundColor(.black)
                                     .clipShape(Circle())
                                     .shadow(radius: 5)
                             }
-                            .padding(.trailing, 20) // Add trailing padding to the filter button
-                            .padding(.bottom, 20) // Add bottom padding to the filter button
+                            .padding(.trailing, 20)
+                            .padding(.bottom, 20)
                             .offset(y: -20)
                 
                 if isFiltering {
-                    // Filter UI
                     VStack {
                         Text("Price Range")
-                            .font(.title)
+                            .font(.customfont(.bold, fontSize: 20))
                             .padding()
-                        
-//                        Slider(value: $minPrice, in: 0...1000, step: 10)
-//                            .padding(.horizontal)
-//
-//                        Slider(value: $maxPrice, in: 0...1000, step: 10)
-//                            .padding(.horizontal)
+
                         
                         Slider(value: $minPrice, in: 0...100000, step: 50)
-                                                   .padding(.horizontal)
+                            .padding(.horizontal)
+                            
                                                
-                        Text("Min: \(minPrice, specifier: "%.2f")")
+                        Text("Min: LKR \(minPrice, specifier: "%.2f")")
                                                    .padding(.horizontal)
                                                
                         Slider(value: $maxPrice, in: 0...100000, step: 50)
                                                    .padding(.horizontal)
                                                
-                        Text("Max: \(maxPrice, specifier: "%.2f")")
+                        Text("Max: LKR \(maxPrice, specifier: "%.2f")")
                                                    .padding(.horizontal)
                         
-                        Spacer()
+                        Divider()
+                            .background(Color.black)
+                            .frame(height: 1)
                         
                         Button("Apply Filters") {
                             // Apply filters
