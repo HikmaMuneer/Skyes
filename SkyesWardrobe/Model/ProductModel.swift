@@ -30,6 +30,7 @@ struct ProductModel:  Identifiable, Equatable {
     var startDate: Date = Date()
     var endDate: Date = Date()
     var isFav: Bool = false
+
     
 
     init(dict: NSDictionary) {

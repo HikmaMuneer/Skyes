@@ -156,8 +156,8 @@ class CartViewModel: ObservableObject
         }
     }
     
-    class func serviceCallAddToCart(prodId: Int, qty: Int, didDone: ((_ isDone: Bool,_ message: String  )->())? ) {
-        ServiceCall.post(parameter: ["prod_id":  prodId, "qty": qty], path: Globs.SV_ADD_CART, isToken: true ) { responseObj in
+    class func serviceCallAddToCart(prodId: Int, qty: Int, color: String, size: String ,didDone: ((_ isDone: Bool,_ message: String  )->())? ) {
+        ServiceCall.post(parameter: ["prod_id":  prodId, "qty": qty, "color": color, "size": size], path: Globs.SV_ADD_CART, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     didDone?(true, response.value(forKey: KKey.message) as? String ?? "Done" )

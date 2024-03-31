@@ -67,6 +67,8 @@
 		9D376FC82BB39767005F6310 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376FC72BB39767005F6310 /* ForgotPasswordView.swift */; };
 		9D376FCA2BB39791005F6310 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376FC92BB39791005F6310 /* OTPView.swift */; };
 		9D376FCC2BB397B5005F6310 /* ForgotPasswordSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D376FCB2BB397B5005F6310 /* ForgotPasswordSetView.swift */; };
+		9D3C60172BB9AA6100B975BD /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3C60162BB9AA6100B975BD /* ColorModel.swift */; };
+		9D3C60192BB9AB8B00B975BD /* SizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3C60182BB9AB8B00B975BD /* SizeModel.swift */; };
 		9D3FF05E2BA5FA61002D1146 /* SkyesWardrobeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FF05D2BA5FA61002D1146 /* SkyesWardrobeApp.swift */; };
 		9D3FF0622BA5FA63002D1146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FF0612BA5FA63002D1146 /* Assets.xcassets */; };
 		9D3FF0652BA5FA63002D1146 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FF0642BA5FA63002D1146 /* Preview Assets.xcassets */; };
@@ -170,6 +172,8 @@
 		9D376FC72BB39767005F6310 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		9D376FC92BB39791005F6310 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
 		9D376FCB2BB397B5005F6310 /* ForgotPasswordSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordSetView.swift; sourceTree = "<group>"; };
+		9D3C60162BB9AA6100B975BD /* ColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
+		9D3C60182BB9AB8B00B975BD /* SizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeModel.swift; sourceTree = "<group>"; };
 		9D3FF05A2BA5FA61002D1146 /* SkyesWardrobe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyesWardrobe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3FF05D2BA5FA61002D1146 /* SkyesWardrobeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyesWardrobeApp.swift; sourceTree = "<group>"; };
 		9D3FF0612BA5FA63002D1146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -386,6 +390,8 @@
 				9D376F932BB382CB005F6310 /* MyOrderModel.swift */,
 				9D376F952BB38D8A005F6310 /* OrderItemModel.swift */,
 				9D376F992BB38DCB005F6310 /* NotificationModel.swift */,
+				9D3C60162BB9AA6100B975BD /* ColorModel.swift */,
+				9D3C60182BB9AB8B00B975BD /* SizeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -673,9 +679,11 @@
 				9D376F6C2BB37B8C005F6310 /* ProductDetailViewModel.swift in Sources */,
 				9DA9C0B52BA7715200424987 /* MainViewModel.swift in Sources */,
 				9D376F582BB37378005F6310 /* FavouriteRow.swift in Sources */,
+				9D3C60172BB9AA6100B975BD /* ColorModel.swift in Sources */,
 				9D376FC82BB39767005F6310 /* ForgotPasswordView.swift in Sources */,
 				9D376F702BB37BD2005F6310 /* ExploreViewModel.swift in Sources */,
 				9D376F682BB37AE9005F6310 /* TypeModel.swift in Sources */,
+				9D3C60192BB9AB8B00B975BD /* SizeModel.swift in Sources */,
 				9D5602A02BA99D3200CA98E0 /* MainTabView.swift in Sources */,
 				9D376F502BB36381005F6310 /* CategoryCell.swift in Sources */,
 				9D376FC22BB3962C005F6310 /* ExploreItemsView.swift in Sources */,

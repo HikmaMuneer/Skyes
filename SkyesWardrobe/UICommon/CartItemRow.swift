@@ -20,14 +20,14 @@ struct CartItemRow: View {
                     .indicator(.activity) // Activity Indicator
                     .transition(.fade(duration: 0.5))
                     .scaledToFit()
-                    .frame(width: 60, height: 60)
+                    .frame(width: 80, height: 80)
                 
                 
                 VStack(spacing: 4){
                     
                     HStack {
                         Text(cObj.name)
-                            .font(.customfont(.bold, fontSize: 16))
+                            .font(.customfont(.bold, fontSize: 14))
                             .foregroundColor(.primaryText)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         
@@ -36,7 +36,7 @@ struct CartItemRow: View {
                         } label: {
                             Image("close")
                                 .resizable()
-                                .frame(width: 18, height: 18)
+                                .frame(width: 16, height: 16)
                         }
                         
                     }
@@ -50,17 +50,17 @@ struct CartItemRow: View {
                             Image( "icons8-minus-48"  )
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 30, height: 30)
-                                .padding(10)
+                                .frame(width: 20, height: 20)
+                                .padding(5)
                         }
                         .padding(4)
                         
                         
                         Text( "\(cObj.qty)" )
-                            .font(.customfont(.bold, fontSize: 18))
+                            .font(.customfont(.bold, fontSize: 14))
                             .foregroundColor(.primaryText)
                             .multilineTextAlignment(.center)
-                            .frame(width: 40, height: 40, alignment: .center)
+                            .frame(width: 25, height: 25, alignment: .center)
                         
                         
                         Button {
@@ -70,15 +70,14 @@ struct CartItemRow: View {
                             Image( "icons8-plus-48"  )
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 30, height: 30)
-                                .padding(10)
+                                .frame(width: 20, height: 20)
+                                .padding(5)
                         }
-                        .padding(4)
                        
                         Spacer()
                         
-                        Text("LKR \(cObj.offerPrice ?? cObj.price, specifier: "%.2f" )")
-                            .font(.customfont(.semibold, fontSize: 18))
+                        Text("Each LKR \(cObj.offerPrice ?? cObj.price, specifier: "%.2f" )")
+                            .font(.customfont(.semibold, fontSize: 14))
                             .foregroundColor(.primaryText)
                     }
                     

@@ -9,12 +9,13 @@ import SwiftUI
 
 struct MyCartView: View {
     @StateObject var cartVM = CartViewModel.shared
+    
     var body: some View {
         ZStack{
             
             if(cartVM.listArr.count == 0) {
                 Text("You Cart is Empty")
-                    .font(.customfont(.bold, fontSize: 20))
+                    .font(.customfont(.bold, fontSize: 18))
             }
             
             ScrollView{
@@ -57,15 +58,15 @@ struct MyCartView: View {
                     } label: {
                         ZStack {
                             Text("Check Out")
-                                .font(.customfont(.semibold, fontSize: 18))
+                                .font(.customfont(.semibold, fontSize: 12))
                                 .foregroundColor(.black)
                                 .multilineTextAlignment(.center)
                             
                             HStack {
                                 Spacer()
                                 Text("LKR \(cartVM.total)")
-                                    .font(.customfont(.semibold, fontSize: 12))
-                                    .foregroundColor(.white)
+                                    .font(.customfont(.semibold, fontSize: 14))
+                                    .foregroundColor(.black)
                                     .padding(.horizontal, 8)
                                     .padding(.vertical, 4)
                                     .background(Color.darkGray.opacity(0.2))
@@ -110,6 +111,7 @@ struct MyCartView: View {
         })
         .animation(.easeInOut, value: cartVM.showCheckout)
         .ignoresSafeArea()
+        
     }
 }
 

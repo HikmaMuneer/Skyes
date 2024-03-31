@@ -15,20 +15,27 @@ class ProductDetailViewModel: ObservableObject
     
     @Published var quantityArr: [QuantityModel] = []
     @Published var imageArr: [ImageModel] = []
-    
-    @Published var colors: [Color] = [.black, .gray, Color(hex: "FFC5BB"), Color(hex: "C3E1EB"), Color(hex: "7AB485")]
-    @Published var sizes: [String] = ["UK 4", "UK 6", "UK 8", "UK 10"]
+
+    @Published var colorArr: [String] = []
+    @Published var sizeArr: [String] = []
+
     @Published var isFav: Bool = false
     @Published var isShowDetail: Bool = false
-    @Published var isShowQuantity: Bool = false
+    @Published var isShowSize: Bool = false
+    @Published var isShowColor: Bool = false
+
     @Published var qty: Int = 1
     
     func showDetail(){
         isShowDetail = !isShowDetail
     }
     
-    func showQuantity(){
-        isShowQuantity = !isShowQuantity
+    func showSize(){
+        isShowSize = !isShowSize
+    }
+    
+    func showColor(){
+        isShowColor = !isShowColor
     }
     
     func addSubQTY(isAdd: Bool = true) {
@@ -49,6 +56,7 @@ class ProductDetailViewModel: ObservableObject
     init(prodObj: ProductModel) {
         self.pObj = prodObj
         self.isFav = prodObj.isFav
+        
         serviceCallDetail()
     }
     
@@ -73,6 +81,14 @@ class ProductDetailViewModel: ObservableObject
                             
                             return ImageModel(dict: obj as? NSDictionary ?? [:])
                         })
+                        
+                        if let colors = payloadObj.value(forKey: "colors") as? [[String: Any]] {
+                            self.colorArr = colors.compactMap { $0["color_value"] as? String }
+                        }
+                                                
+                        if let sizes = payloadObj.value(forKey: "sizes") as? [[String: Any]] {
+                            self.sizeArr = sizes.compactMap { $0["size_name"] as? String }
+                        }
                     }
                     
                     

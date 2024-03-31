@@ -11,9 +11,7 @@ import SDWebImageSwiftUI
 struct ProductDetailView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @StateObject var detailVM: ProductDetailViewModel = ProductDetailViewModel(prodObj: ProductModel(dict: [:]) )
-
-    let sizes = ["UK 4", "UK 6", "UK 8", "UK 10"]
-    @State private var selectedColor: Color?
+    @State private var selectedColor: String?
     @State private var selectedSize: String?
 
     
@@ -45,7 +43,7 @@ struct ProductDetailView: View {
                 VStack{
                     HStack{
                         Text(detailVM.pObj.name)
-                            .font(.customfont(.bold, fontSize: 24))
+                            .font(.customfont(.bold, fontSize: 14))
                             .foregroundColor(.primaryText)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         Button {
@@ -55,7 +53,7 @@ struct ProductDetailView: View {
                             Image( detailVM.isFav ? "favorite" : "fav"  )
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 30, height: 30)
+                                .frame(width: 20, height: 20)
                         }
                         .foregroundColor(Color.secondaryText)
                         
@@ -71,15 +69,15 @@ struct ProductDetailView: View {
                             Image( "icons8-minus-48"  )
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 30, height: 30)
-                                .padding(10)
+                                .frame(width: 20, height: 20)
+                                .padding(5)
                         }
                         
                         Text( "\(detailVM.qty)" )
-                            .font(.customfont(.bold, fontSize: 24))
+                            .font(.customfont(.bold, fontSize: 14))
                             .foregroundColor(.primaryText)
                             .multilineTextAlignment(.center)
-                            .frame(width: 45, height: 45, alignment: .center)
+                            .frame(width: 30, height: 30, alignment: .center)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 16)
                                     .stroke(  Color.placeholder.opacity(0.5), lineWidth: 1)
@@ -92,13 +90,13 @@ struct ProductDetailView: View {
                             Image( "icons8-plus-48"  )
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 30, height: 30)
-                                .padding(10)
+                                .frame(width: 20, height: 20)
+                                .padding(5)
                         }
                         
                         Spacer()
                         Text( "LKR \(  (detailVM.pObj.offerPrice ?? detailVM.pObj.price) * Double(detailVM.qty) , specifier: "%.2f")"  )
-                            .font(.customfont(.bold, fontSize: 28))
+                            .font(.customfont(.bold, fontSize: 16))
                             .foregroundColor(.primaryText)
                         
                     }
@@ -115,7 +113,7 @@ struct ProductDetailView: View {
                 VStack{
                     HStack{
                         Text("Product Details")
-                            .font(.customfont(.semibold, fontSize: 16))
+                            .font(.customfont(.semibold, fontSize: 14))
                             .foregroundColor(.primaryText)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         Button {
@@ -148,59 +146,50 @@ struct ProductDetailView: View {
                 }
                 .padding(.horizontal, 20)
                 
-                
+
                 VStack {
                     HStack {
                         Text("Size")
-                            .font(.customfont(.semibold, fontSize: 16))
+                            .font(.customfont(.semibold, fontSize: 14))
                             .foregroundColor(.primaryText)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         
-                        Text(detailVM.pObj.nutritionWeight)
-                            .font(.customfont(.semibold, fontSize: 10))
-                            .foregroundColor(.secondaryText)
-                            .padding(8)
-                            .background( Color.placeholder.opacity(0.5) )
-                            .cornerRadius(5)
                         
                         Button {
                             withAnimation {
-                                detailVM.showQuantity()
+                                detailVM.showSize()
                             }
                         } label: {
-                            Image( detailVM.isShowQuantity ? "detail_open" : "icons8-next-50"  )
+                            Image( detailVM.isShowSize ? "detail_open" : "icons8-next-50"  )
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 15, height: 15)
+                                .frame(width: 20, height: 20)
                                 .padding(15)
                         }
                         .foregroundColor(Color.primaryText)
                     }
                     
-                    if detailVM.isShowQuantity {
+                    if detailVM.isShowSize {
                         ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 10) {
-                                ForEach(detailVM.sizes, id: \.self) { size in
+                            HStack {
+                                ForEach(detailVM.sizeArr, id: \.self) { size in
                                     Button(action: {
                                         selectedSize = size
                                     }) {
                                         Text(size)
-                                            .font(.customfont(.semibold, fontSize: 15))
-                                            .foregroundColor(.primaryText)
-                                            .padding(.horizontal, 15)
-                                            .padding(.vertical, 8)
-                                            .background(
-                                                RoundedRectangle(cornerRadius: 5)
-                                                    .fill(selectedSize == size ? Color.secondaryText.opacity(0.5) : Color.secondaryText.opacity(0.2))
-                                            )
+                                            .font(.customfont(.semibold, fontSize: 10))
+                                            .padding(.vertical, 5)
+                                            .padding(.horizontal, 8)
+                                            .background(selectedSize == size ? Color(hex: "FFC5BB") : Color.gray.opacity(0.5))
+                                            .foregroundColor(selectedSize == size ? .black : .white)
+                                            .foregroundColor(.white)
+                                            .cornerRadius(8)
                                     }
-                                    .buttonStyle(PlainButtonStyle())
+                                    
                                 }
                             }
-                            .padding(.horizontal, 10)
                         }
                     }
-                    
                     Divider()
                 }
                 .padding(.horizontal, 20)
@@ -208,33 +197,63 @@ struct ProductDetailView: View {
                 
                 
                 VStack {
-                    Text("Colors")
-                        .font(.customfont(.semibold, fontSize: 16))
-                        .foregroundColor(.primaryText)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     
                     HStack(spacing: 10) {
-                        ForEach(detailVM.colors, id: \.self) { color in
-                            Button(action: {
-                                selectedColor = color
-                            }) {
-                                Circle()
-                                    .fill(color)
-                                    .frame(width: 20, height: 20)
-                                    .overlay(
-                                        Circle().stroke(Color.white, lineWidth: selectedColor == color ? 2 : 0)
-                                    )
+                        
+                        Text("Colors")
+                            .font(.customfont(.semibold, fontSize: 14))
+                            .foregroundColor(.primaryText)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        
+                        Button {
+                            withAnimation {
+                                detailVM.showColor()
                             }
-                            .buttonStyle(PlainButtonStyle())
+                        } label: {
+                            Image( detailVM.isShowColor ? "detail_open" : "icons8-next-50"  )
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 15, height: 15)
+                                .padding(15)
+                        }
+                        .foregroundColor(Color.primaryText)
+                        
+                    }
+                    .padding(.top, 6)
+                    
+                    //----------
+                    if detailVM.isShowColor {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(detailVM.colorArr, id: \.self) { color in
+                                    Button(action: {
+                                        selectedColor = color
+                                    }) {
+                                        Circle()
+                                            .foregroundColor(Color(hex: color))
+                                            .frame(width: 15, height: 15)
+                                            .overlay(
+                                                Circle()
+                                                    .stroke(selectedColor == color ? Color.blue : Color.clear, lineWidth: 2)
+                                            )
+                                        
+                                    }
+                                    .padding(.horizontal, 8)
+                                }
+                                
+                                
+                            }
+                            .padding(.horizontal, 8)
                         }
                     }
-                    
-                    
                 }
                 .padding(.horizontal, 20)
+                    
+                    //----------
+                    
                 
                 RoundButton(title: "Add To Basket") {
-                    CartViewModel.serviceCallAddToCart(prodId: detailVM.pObj.prodId, qty: detailVM.qty) { isDone, msg  in
+                    CartViewModel.serviceCallAddToCart(prodId: detailVM.pObj.prodId, qty: detailVM.qty, color: selectedColor ?? "FFFFFF", size: selectedSize ?? "UK 4" ) { isDone, msg  in
                         
                         detailVM.qty = 1
                         
@@ -243,6 +262,7 @@ struct ProductDetailView: View {
                     }
                 }
                 .padding( 20)
+                .padding(.top, 15)
                 
             }
             
@@ -259,15 +279,6 @@ struct ProductDetailView: View {
                     }
                     
                     Spacer()
-                    
-                    Button {
-                    } label: {
-                        Image("share")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 25, height: 25)
-                    }
-                    
                 }
                 
                 Spacer()
@@ -280,11 +291,17 @@ struct ProductDetailView: View {
             
             Alert(title: Text(Globs.AppName), message: Text(detailVM.errorMessage)  , dismissButton: .default(Text("OK"))  )
         })
+        .onAppear {
+            // Set the initial selected color and size to the first elements of their respective arrays
+            selectedColor = detailVM.colorArr.first
+            selectedSize = detailVM.sizeArr.first
+        }
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
         .edgesIgnoringSafeArea(.all)
     }
+
 }
 
 struct ProductDetailView_Previews: PreviewProvider {
