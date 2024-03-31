@@ -5,82 +5,68 @@
 //  Created by Hikma Muneer on 2024-03-27.
 //
 
+
 import SwiftUI
 import SDWebImageSwiftUI
 
 struct ProductCell: View {
     @State var pObj: ProductModel = ProductModel(dict: [:])
-    @State var width: Double = 150.0
-    var didAddCart: ( ()->() )?
-    
-    
+    @State var width: CGFloat = 120.0
+    var didAddCart: (() -> ())?
+
     var body: some View {
-        NavigationLink {
-            ProductDetailView(detailVM:  ProductDetailViewModel(prodObj: pObj) )
-        } label: {
-            VStack{
-                
-                WebImage(url: URL(string: pObj.image ))
+        NavigationLink(destination: ProductDetailView(detailVM:  ProductDetailViewModel(prodObj: pObj))) {
+            VStack(spacing: 8) {
+                WebImage(url: URL(string: pObj.image))
                     .resizable()
                     .indicator(.activity)
                     .transition(.fade(duration: 0.5))
                     .scaledToFit()
-                    .frame(width: 100, height: 100)
-                
-                Spacer()
-                
+                    .frame(width: 120, height: 120)
+                    .cornerRadius(8)
+                    
+
                 Text(pObj.name)
-                    .font(.customfont(.bold, fontSize: 12))
-                    .foregroundColor(.primaryText)
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                
+                    .font(.system(size: 12, weight: .bold))
+                    .foregroundColor(.primary)
+
                 Text("\(pObj.unitValue)\(pObj.unitName)")
-                    .font(.customfont(.medium, fontSize: 10))
-                    .foregroundColor(.secondaryText)
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                
-                Spacer()
-                
-                HStack{
-                    Text("LKR \(pObj.offerPrice ?? pObj.price, specifier: "%.2f" )")
-                        .font(.customfont(.semibold, fontSize: 10))
-                        .foregroundColor(.primaryText)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    
+                    .font(.system(size: 10))
+                    .foregroundColor(.secondary)
+
+                HStack {
+                    Text("LKR \(pObj.offerPrice ?? pObj.price, specifier: "%.2f")")
+                        .font(.system(size: 10, weight: .semibold))
+                        .foregroundColor(.primary)
+
                     Spacer()
-                    
-                    Button {
-                        
+
+                    Button(action: {
                         didAddCart?()
-                    } label: {
-                        Image("icons8-plus-48")
+                    }) {
+                        Image(systemName: "cart.badge.plus")
                             .resizable()
-                            .scaledToFit()
-                            .frame(width: 30, height: 30)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 15, height: 15)
+                            .foregroundColor(.primary)
                     }
-                    .frame(width: 40, height: 40)
-//                    .background( Color.primaryApp)
+                    .frame(width: 30, height: 30)
+                    .background(Color.secondary.opacity(0.2))
                     .cornerRadius(15)
-                    
-                    
+                    .padding(.bottom, 10)
                 }
-                
             }
-            .padding(15)
-            .frame(width: width, height: 200)
-            .overlay(
-                RoundedRectangle(cornerRadius: 16)
-                    .stroke(  Color.placeholder.opacity(0.5), lineWidth: 1)
-            )
+            .padding(10)
+            .frame(width: width, height: 250)
+            .background(Color.white)
+            .cornerRadius(16)
+            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
         }
-        
     }
 }
 
 struct ProductCell_Previews: PreviewProvider {
     static var previews: some View {
-        ProductCell(pObj: ProductModel(dict: [:])) {
-            
-        }
+        ProductCell(pObj: ProductModel(dict: [:])) {}
     }
 }
